@@ -2,8 +2,8 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 library(statebins)
-
-us_states <- read_csv("./us-states.csv") %>%
+# This read command won't work because you are changing folders incorrectly   -10
+us_states <- read_csv("Assignment 5/us-states.csv") %>%
   group_by(state) %>%
   summarize(total_cases = max(cases), 
             total_deaths = max(deaths))
